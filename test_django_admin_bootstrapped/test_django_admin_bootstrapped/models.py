@@ -10,7 +10,7 @@ class TestMe(models.Model):
     test_file = models.FileField(upload_to='dummy', blank=True)
     test_date = models.DateField(help_text="Lorem dolor")
     test_char = models.CharField(max_length=50, help_text="Lorem dolor")
-    test_bool = models.BooleanField(help_text="Lorem dolor")
+    test_bool = models.BooleanField(help_text="Lorem dolor", default=False)
     test_time = models.TimeField(help_text="Lorem dolor")
     test_slug = models.SlugField(help_text="Lorem dolor")
     test_text = models.TextField(help_text="Lorem dolor")
@@ -24,6 +24,9 @@ class TestMe(models.Model):
     test_nullbool = models.NullBooleanField(help_text="Lorem dolor")
     test_filepath = models.FilePathField(blank=True, help_text="Lorem dolor")
     test_positive_small_int = models.PositiveSmallIntegerField(help_text="Lorem dolor")
+
+    def get_absolute_url(self):
+        return ''
 
     class Meta:
         verbose_name = u'Test me'
@@ -43,7 +46,7 @@ class TestThat(models.Model):
     test_url = models.URLField(help_text="Lorem dolor")
     test_int = models.IntegerField(help_text="Lorem dolor")
     test_date = models.DateField(help_text="Lorem dolor")
-    test_bool = models.BooleanField(help_text="Lorem dolor")
+    test_bool = models.BooleanField(help_text="Lorem dolor", default=True)
 
     class Meta:
         verbose_name = u'Test that'

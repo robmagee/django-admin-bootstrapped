@@ -1,9 +1,110 @@
-==== 2.0.0 (UNRELEASED) ====
+==== 2.X.X (2015-0X-XX) ====
+
+WARNING: bootstrap3 application is deprecated, would be removed in the next major release
+Please remove it from the INSTALLED_APPS in settings.py
+
+- Django 1.8 compatibility fixes #177, #178 (Joel Burton)
+- Fixed some glyphicons classes conversion from bootstrap 2 (Riccardo)
+
+==== 2.3.3 (2015-02-10) ====
+
+WARNING: bootstrap3 application is deprecated, would be removed in the next major release
+Please remove it from the INSTALLED_APPS in settings.py
+
+- Import firstof from future to ensure Django 1.8 compatibility #175 (Jamie Curle)
+- Fix CheckboxSelectMultiple style #174 (Riccardo)
+- Fix input-group-addon rendering #172 (Riccardo)
+
+==== 2.3.2 (2015-01-23) ====
+
+WARNING: bootstrap3 application is deprecated, would be removed in the next major release
+Please remove it from the INSTALLED_APPS in settings.py
+
+- Cleanup messages tags usage in alerts #166 (Patrick Miller)
+- Cope with django-bootstrap3 api update #171 (Fernando Gonzalez)
+- Update bootstrap to 3.3.2 #170 (Riccardo)
+- Make the filter menu in change list scrollable #169 (Riccardo)
+
+==== 2.3.1 (2014-12-08) ====
+
+WARNING: bootstrap3 application is deprecated, would be removed in the next major release
+Please remove it from the INSTALLED_APPS in settings.py
+
+- Add missing import in custom field rendering #162 (James Oakley)
+- Add missing timezone handling to base template #164 (qxcv)
+- Add custom field rendering tests #163 (Riccardo)
+
+==== 2.3.0 (2014-12-04) ====
+
+WARNING: bootstrap3 application is deprecated, would be removed in the next major release
+Please remove it from the INSTALLED_APPS in settings.py
+
+- Fix "Add model" button focus #156 (Riccardo)
+- Cleanup django-filer templates (UI is terrible though) #158 (Riccardo)
+- Add support for custom field rendering #152 (Riccardo)
+
+==== 2.2.1 (2014-11-26) ====
+
+WARNING: bootstrap3 application is deprecated, would be removed in the next major release
+Please remove it from the INSTALLED_APPS in settings.py
+
+- Fix "Add model" button hover #156 (Riccardo)
+- Remove spurious hamburger icon in index (Riccardo)
+- Fix collapsible handling with stacked inlines #129 (Brandon Cazander)
+
+==== 2.2.0 (2014-11-19) ====
+
+WARNING: bootstrap3 application is deprecated, would be removed in the next major release
+Please remove it from the INSTALLED_APPS in settings.py
+
+- Move bootstrap3 static and templates back to django admin bootstrapped (Riccardo)
+- Upgrade bootstrap to 3.3.1 (Riccardo)
+- Make inner header responsive #144 (Riccardo)
+
+==== 2.1.1 (2014-11-10) ====
+
+- Add missing translation to search button (Chun-Wei Shen)
+- Fix js error on add view #155 (Riccardo, Marc)
+- Fix opts.module_name RemovedInDjango18Warning #154 (Riccardo)
+
+==== 2.1.0 (2014-10-23) ====
+
+- Make form labels bigger (Marcio Mazza)
+- Cleanup applicated related fields (P.A. Schembri)
+- Don't break fieldsets with empty inlines (Christopher Trudeau)
+- Fixup app label in breadcrumbs (P.A. Schembri)
+- Navbar fixups #143 (Riccardo)
+- Improve header contrast #150 (Riccardo)
+- Cleanup login ui #142 (Riccardo)
+
+==== 2.0.5 (2014-10-08) ====
+
+- Fix hidden display of actions links in change_list (Marcio Mazza)
+- Remove hardcoded username and password label for login #137 (Riccardo)
+- Make navbar RTL aware #139 (pajooh)
+- Show save button on change list conditionally #138 (Riccardo)
+- Rework application dropdown (Riccardo)
+
+==== 2.0.4 (2014-09-25) ====
+
+- Add missing jquery-migrate.js #134 (Andy Kilner)
+
+==== 2.0.3 (2014-09-18) ====
+
+- Fix inline fieldsets collapsing in stacked inlines (Riccardo)
+- Fix application label in breadcrumbs #133 (P.A. Schembri)
+
+==== 2.0.1 (2014-09-15) ====
+
+- Add missing models.py in bootstrap3 for django 1.6 #132 (Riccardo)
+
+==== 2.0.0 (2014-09-12) ====
 
 - Removal of bootstrap2 theme (Riccardo)
 - Drop support for django < 1.6 (Riccardo)
-- Django 1.7 support #117, #124 (Riccardo)
+- Django 1.7 support #117, #118, #124 (Riccardo)
 - Remove hardcoded urls (history, delete, etc...) #121, #123 (Riccardo)
+- Fix checkboxes rendering with bootstrap 3.2.0 #126 (Riccardo)
 
 ==== 1.6.8 (2014-08-22) ====
 

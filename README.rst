@@ -22,17 +22,26 @@ The old ``1.x`` series works with Django ``>=1.4`` and  ``<1.7``.
 
 ::
 
-    'django_admin_bootstrapped.bootstrap3',
     'django_admin_bootstrapped',
 
 3. Have fun!
 
 Configuration
--------
+-------------
+
+For a full bootstrap3 experience you may want to use a custom renderer for the fields.
+There's one available in tree that requires the ``django-bootstrap3`` application installed.
+You have to add to your project settings file:
+::
+
+    DAB_FIELD_RENDERER = 'django_admin_bootstrapped.renderers.BootstrapFieldRenderer'
+
 
 `Messages <http://docs.djangoproject.com/en/dev/ref/contrib/messages>`__ will have ``alert-info`` tag by default, 
-so you may want to add Bootstrap 3 tags for different message levels to make them styled appropriately:
+so you may want to add Bootstrap 3 tags for different message levels to make them styled appropriately.
+Add to your project settings file:
 ::
+
     from django.contrib import messages
     
     MESSAGE_TAGS = {
@@ -40,14 +49,13 @@ so you may want to add Bootstrap 3 tags for different message levels to make the
                 messages.WARNING: 'alert-warning warning',
                 messages.ERROR: 'alert-danger error'
     }
-::
 
 Now, adding messages like this:
 ::
+
     messages.success(request, "My success message")
     messages.warning(request, "My warning message")
     messages.error(request, "My error message")
-::
 
 will result into this:
 
@@ -59,13 +67,16 @@ Goodies
 Translate/change an application name with a template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-With the default admin you can't change the application name, but
-django-admin-bootstrapped let you do it in a really easy way. Just
-create a file named ``admin_app_name.html`` into the application's
+With a version of django ``< 1.7`` you can't change the application
+name, but django-admin-bootstrapped let you do it in a really easy way.
+Create a file named ``admin_app_name.html`` into the application's
 template folder. Eg: ``myapp/templates/admin_app_name.html`` or
-``project/templates/myapp/admin_app_name.html``. You can also change the
-default Django Administration title, just add a ``admin_title.html``
-file into your ``project/templates/admin/`` folder.
+``project/templates/myapp/admin_app_name.html``. Please be warned that
+since this is already possible using plain django the feature
+will be removed in favour of the upstream solution.
+
+You can also change the default Django Administration title, just add a
+``admin_title.html`` file into your ``project/templates/admin/`` folder.
 
 Add custom html to the change form of any model with a template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -157,6 +168,15 @@ fields <https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.
 
 This feature (and many more) was brought to you by `Jacob
 Magnusson <https://github.com/jmagnusson>`__. Thank you Jacob!
+
+Contributing
+------------
+
+Every code, documentation and UX contribution is welcome.
+
+Found an issue? Report it in the bugtracker!
+
+Have some free time? Help fixing an already filed issue, just remember to work on a separate branch please.
 
 Screenshots
 -----------
